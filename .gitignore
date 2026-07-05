@@ -1,3 +1,9 @@
 .next/
 node_modules/
 out/
+
+# AI 세션 컨텍스트 (서버 접속/배포 정보, 로컬 전용)
+.ai_context.md
+
+# Serena (로컬 툴 캐시)
+.serena/
