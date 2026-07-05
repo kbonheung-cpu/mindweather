@@ -58,7 +58,9 @@ curl -s https://mindweather.jeoninedu.life/robots.txt
 
 - Cloudflare tunnel + 서브도메인 `mindweather.jeoninedu.life` → `127.0.0.1:30410` 연결/관리.
 
-## 레거시 파일 (현재 미사용, 참고용 유지)
+## 대안 경로 (현재 미사용, 참고용 유지)
 
 - `docker-compose.yml`, `Dockerfile` — 컨테이너 배포용. 현재는 systemd 직접 실행이라 미사용.
-- `deploy/nginx/mindweather.jeoninedu.life.conf` — 단일 VPS에서 nginx 리버스 프록시 + certbot 쓸 때의 샘플. Cloudflare tunnel 방식에서는 불필요.
+
+> 구 버전에 있던 `deploy/nginx/*.conf`(단일 VPS nginx 리버스 프록시 + certbot 샘플)는 제거했다.
+> jeonin-hub는 Cloudflare tunnel로 직접 `127.0.0.1:30410`을 노출하므로 host nginx/certbot이 필요 없다.

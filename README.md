@@ -21,10 +21,10 @@ npm run dev
 
 ## jeoninedu.life 배포 준비
 
-- Docker 기반 배포 파일 포함
-- nginx 설정 샘플 포함
+- 실제 배포: **jeonin-hub 서버 + systemd(`mindweather.service`) + Cloudflare tunnel** (내부 포트 30410, nginx/certbot 미사용 — TLS는 Cloudflare가 처리)
 - 배포 문서: `docs/jeoninedu-life-배포가이드.md`
 - 도메인 후보 메모: `docs/도메인-후보-메모.md`
+- `Dockerfile` / `docker-compose.yml`은 컨테이너 대안 경로(현 배포에선 미사용)
 
 기본 권장 공개 주소는 `mindweather.jeoninedu.life`입니다.
 
