@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${APP_CONTAINER_NAME:-mind-weather-app}
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+      TZ: ${TZ:-Asia/Seoul}
+      SITE_URL: ${SITE_URL:-https://mindweather.jeoninedu.life}
+    ports:
+      - "127.0.0.1:${APP_PORT:-30410}:3000"
+    restart: unless-stopped
