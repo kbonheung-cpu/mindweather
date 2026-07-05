@@ -18,6 +18,18 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Mind Weather",
   description: "Daily stress self-care with mood check-ins and recovery routines.",
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
+    nosnippet: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noarchive: true,
+      nosnippet: true,
+    },
+  },
 };
 
 export default function RootLayout({
